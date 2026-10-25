@@ -1,0 +1,12 @@
+build/
+*.o
+*.obj
+*.pfx
+*.p12
+*.key
+*.pem
+*.exe
+*.dll
+__pycache__/
+*.zip
+*.tar.gz

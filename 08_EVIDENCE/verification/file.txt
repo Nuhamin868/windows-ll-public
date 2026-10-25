@@ -1,0 +1,1 @@
+/home/noxira/Desktop/Windows-LL-Updated-20261025/build/windows/windows_ll.exe: PE32+ executable for MS Windows 5.02 (console), x86-64, 18 sections

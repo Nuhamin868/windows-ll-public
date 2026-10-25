@@ -1,0 +1,6 @@
+PASS AMD64 PE32+, ordinary imports visible, NX/ASLR/high-entropy flags.
+PASS source contains no calls to audited remote modification/injection APIs.
+NOTE SetThreadContext is imported by statically linked MinGW pthread cancellation support; not called by application source. See runtime-import-audit.txt. Import absence is not a safety proof.
+PASS identical bytes from two independent Release build trees using the same toolchain.
+SHA256 f1f867a76c92876883707cdd6adf5dbe021c5c3ac2ccb6f67bff1fd8b0d11a99
+DLLs: ADVAPI32.dll, bcrypt.dll, KERNEL32.dll, api-ms-win-crt-convert-l1-1-0.dll, api-ms-win-crt-environment-l1-1-0.dll, api-ms-win-crt-filesystem-l1-1-0.dll, api-ms-win-crt-heap-l1-1-0.dll, api-ms-win-crt-locale-l1-1-0.dll, api-ms-win-crt-math-l1-1-0.dll, api-ms-win-crt-private-l1-1-0.dll, api-ms-win-crt-runtime-l1-1-0.dll, api-ms-win-crt-stdio-l1-1-0.dll, api-ms-win-crt-string-l1-1-0.dll, api-ms-win-crt-time-l1-1-0.dll, api-ms-win-crt-utility-l1-1-0.dll, WINHTTP.dll

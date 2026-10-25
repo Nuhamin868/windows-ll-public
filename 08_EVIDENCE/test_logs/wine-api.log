@@ -1,0 +1,8 @@
+it looks like wine32 is missing, you should install it.
+multiarch needs to be enabled first.  as root, please
+execute "dpkg --add-architecture i386 && apt-get update &&
+apt-get install wine32:i386"
+{"event":"artifact_validated","detail":"authenticated inert schema; plaintext not exported"}
+{"event":"metadata","pid":32,"reported_parent_pid":0,"command_line":"\"Z:\\home\\noxira\\Projects\\windows-ll-submission-review\\Windows LL\\build\\windows\\winll_windows_unit.exe\" 04_TESTING/test_data"}
+{"event":"process","pid":32,"name":"winll_windows_unit.exe","architecture":"x64","query_error":0}
+PASS 16 Windows API unit/smoke cases

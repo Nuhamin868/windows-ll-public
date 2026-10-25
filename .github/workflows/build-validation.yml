@@ -1,0 +1,39 @@
+name: Build and extended Windows validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: mingw-w64-x86_64-gcc mingw-w64-x86_64-cmake mingw-w64-x86_64-ninja
+      - name: Build C++20 Windows executables
+        shell: msys2 {0}
+        run: |
+          cmake -S . -B build/windows -G Ninja -DCMAKE_BUILD_TYPE=Release
+          cmake --build build/windows
+      - name: Run native Windows integration
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          python 04_TESTING/integration/runtime_validation.py
+          if ($LASTEXITCODE -ne 0) { throw 'Runtime validation failed' }
+          & ./04_TESTING/integration/windows_validation.ps1 *>&1 | Tee-Object 08_EVIDENCE/test_logs/windows-powershell.log
+      - name: Preserve executables and evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-executables-and-evidence
+          path: |
+            build/windows/*.exe
+            08_EVIDENCE/test_logs/windows-*

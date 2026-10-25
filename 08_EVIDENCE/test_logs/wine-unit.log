@@ -1,0 +1,5 @@
+it looks like wine32 is missing, you should install it.
+multiarch needs to be enabled first.  as root, please
+execute "dpkg --add-architecture i386 && apt-get update &&
+apt-get install wine32:i386"
+PASS 5059 checks (including 4000 mutations)

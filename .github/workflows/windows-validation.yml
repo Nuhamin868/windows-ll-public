@@ -1,0 +1,39 @@
+name: Windows validation
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to validate
+        required: true
+        default: v0.1.0-review
+permissions:
+  contents: read
+jobs:
+  offline-integration:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - name: Download validation bundle
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          gh release download $env:RELEASE_TAG --repo $env:GH_REPO --pattern windows-ll-validation.zip --dir .
+          if ($LASTEXITCODE -ne 0) { throw 'Release download failed' }
+          Expand-Archive windows-ll-validation.zip -DestinationPath validation
+      - name: Run native Windows offline validation
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force validation/08_EVIDENCE/test_logs | Out-Null
+          $log = Join-Path $PWD windows-validation.log
+          & ./validation/04_TESTING/integration/windows_validation.ps1 *>&1 | Tee-Object -FilePath $log
+      - name: Preserve actual runtime evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: native-windows-evidence
+          path: |
+            windows-validation.log
+            validation/08_EVIDENCE/test_logs/

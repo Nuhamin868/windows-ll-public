@@ -1,0 +1,1 @@
+PASS 9 Python TLS fixture-service smoke cases on localhost:18443 with per-request test CA. No system trust changes. This is service smoke evidence, NOT WinHTTP or controlled live HTTPS acceptance.

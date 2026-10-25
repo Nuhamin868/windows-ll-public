@@ -1,0 +1,6 @@
+# Windows LL engineering rules
+
+Project WINLL-001 is an authorized, inert Windows internals research harness. Use C++20 and the MinGW CMake toolchain. Keep Windows executable code Windows-only; native builds may test the portable parser/hash/schema library. Never implement remote injection, execution of retrieved data, hidden API resolution, ancestry manipulation, or command-line spoofing.
+
+Check existing files before edits. Use RAII and bounds-checked parsing. Run `bash 05_BUILD/scripts/build.sh` and `bash 05_BUILD/scripts/test.sh` after material changes. Keep keys outside Git and never export decrypted plaintext. Keep `00_PROJECT_MANAGEMENT/IMPLEMENTATION_STATUS.md`, the task list, test results, and session logs accurate. A cross-build is not a Windows runtime test. Do not claim synthetic telemetry was collected from a real endpoint. Review source and project docs before packaging. Do not install dependencies or alter system configuration without user approval.
+When a task draws on the supplied Maldev Academy course, consult `01_RESEARCH/MALDEV_ACADEMY_KNOWLEDGE_BASE.md` and `02_ARCHITECTURE/COURSE_ALIGNMENT.md`. Verify Windows behavior against primary API/format documentation. Course injection, spoofing, concealment, unhooking and anti-analysis implementations stay research-only.

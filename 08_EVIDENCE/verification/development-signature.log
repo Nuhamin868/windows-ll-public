@@ -1,0 +1,133 @@
+CASE development signing
+Succeeded
+
+exit=0
+CASE explicit development certificate trust
+PE checksum   : 0028FFB8
+
+Signature Index: 0  (Primary Signature)
+
+Message digest algorithm  : SHA256
+Current message digest    : 78BCAC8820D331277ABAEF1142C17847F7BE90193F93B59079B2E06BFCF53A84 
+Calculated message digest : 78BCAC8820D331277ABAEF1142C17847F7BE90193F93B59079B2E06BFCF53A84 
+
+Signer's certificate:
+	------------------
+	Signer #0:
+		Subject: /CN=Windows LL Development Only
+		Issuer : /CN=Windows LL Development Only
+		Serial : 70AF2A08186EF50D8AD5796E053A21D1D59395C3
+		Certificate expiration date:
+			notBefore : Oct 25 09:25:20 2026 GMT
+			notAfter : Nov 24 09:30:20 2026 GMT
+
+Message digest algorithm: SHA256
+
+Authenticated attributes:
+	Signing time: Oct 25 09:30:20 2026 GMT
+	Microsoft Individual Code Signing purpose
+	Message digest: F3D094EAA2A85F3E3E8B68BDEA70542C0B3917F0B2C80FEF6CA4AF66C9F2AD14 
+	Text description: Windows LL development research build
+
+CAfile: /tmp/winll-signing-xxyg08_y/cert.pem
+TSA's certificates file: /etc/ssl/certs/ca-certificates.crt
+
+Timestamp is not available
+
+Signing certificate chain verified using:
+	------------------
+	Signer #0:
+		Subject: /CN=Windows LL Development Only
+		Issuer : /CN=Windows LL Development Only
+		Serial : 70AF2A08186EF50D8AD5796E053A21D1D59395C3
+		Certificate expiration date:
+			notBefore : Oct 25 09:25:20 2026 GMT
+			notAfter : Nov 24 09:30:20 2026 GMT
+
+Signature verification: ok
+
+Number of verified signatures: 1
+Succeeded
+
+exit=0
+CASE default trust rejection
+PE checksum   : 0028FFB8
+
+Signature Index: 0  (Primary Signature)
+
+Message digest algorithm  : SHA256
+Current message digest    : 78BCAC8820D331277ABAEF1142C17847F7BE90193F93B59079B2E06BFCF53A84 
+Calculated message digest : 78BCAC8820D331277ABAEF1142C17847F7BE90193F93B59079B2E06BFCF53A84 
+
+Signer's certificate:
+	------------------
+	Signer #0:
+		Subject: /CN=Windows LL Development Only
+		Issuer : /CN=Windows LL Development Only
+		Serial : 70AF2A08186EF50D8AD5796E053A21D1D59395C3
+		Certificate expiration date:
+			notBefore : Oct 25 09:25:20 2026 GMT
+			notAfter : Nov 24 09:30:20 2026 GMT
+
+Message digest algorithm: SHA256
+
+Authenticated attributes:
+	Signing time: Oct 25 09:30:20 2026 GMT
+	Microsoft Individual Code Signing purpose
+	Message digest: F3D094EAA2A85F3E3E8B68BDEA70542C0B3917F0B2C80FEF6CA4AF66C9F2AD14 
+	Text description: Windows LL development research build
+
+CAfile: /etc/ssl/certs/ca-certificates.crt
+TSA's certificates file: /etc/ssl/certs/ca-certificates.crt
+
+Timestamp is not available
+
+Signing certificate chain verified using:
+	------------------
+	Signer #0:
+		Subject: /CN=Windows LL Development Only
+		Issuer : /CN=Windows LL Development Only
+		Serial : 70AF2A08186EF50D8AD5796E053A21D1D59395C3
+		Certificate expiration date:
+			notBefore : Oct 25 09:25:20 2026 GMT
+			notAfter : Nov 24 09:30:20 2026 GMT
+
+	Error: self-signed certificate
+
+PKCS7_verify error
+Failed signing certificate chain retrieved from the signature:
+	------------------
+	Signer #0:
+		Subject: /CN=Windows LL Development Only
+		Issuer : /CN=Windows LL Development Only
+		Serial : 70AF2A08186EF50D8AD5796E053A21D1D59395C3
+		Certificate expiration date:
+			notBefore : Oct 25 09:25:20 2026 GMT
+			notAfter : Nov 24 09:30:20 2026 GMT
+
+Signature verification: failed
+
+Number of verified signatures: 1
+Failed
+8017C45DE57F0000:error:10800075:PKCS7 routines:PKCS7_verify:certificate verify error:../crypto/pkcs7/pk7_smime.c:298:Verify error: self-signed certificate
+
+exit=1
+CASE tamper detection
+Current PE checksum   : 0028FFB8
+Calculated PE checksum: 0028FFB7
+Warning: invalid PE checksum
+
+Signature Index: 0  (Primary Signature)
+
+Message digest algorithm  : SHA256
+Current message digest    : 78BCAC8820D331277ABAEF1142C17847F7BE90193F93B59079B2E06BFCF53A84 
+Calculated message digest : 129D1EEE6D941A8940B81BCA4C3030DB026FA83CEAB798CC70F5484E98E5970F     MISMATCH!!!
+
+Number of verified signatures: 1
+Failed
+Signature verification: failed
+
+
+exit=1
+PASS development sign, explicit trust, default trust rejection, tamper detection
+No public trust, timestamp, or Windows Authenticode claim. Temporary private key deleted.

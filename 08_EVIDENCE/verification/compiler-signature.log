@@ -1,0 +1,55 @@
+range 0 verified-size
+range 1 verified-size
+range 2 verified-size
+range 3 verified-size
+range 4 verified-size
+curl: (28) Operation timed out after 300000 milliseconds with 7851549 out of 8388608 bytes received
+range 5 verified-size
+range 6 verified-size
+range 7 verified-size
+range 8 verified-size
+range 9 verified-size
+range 10 verified-size
+range 11 verified-size
+range 12 verified-size
+range 13 verified-size
+range 14 verified-size
+range 15 verified-size
+range 16 verified-size
+range 17 verified-size
+range 18 verified-size
+range 19 verified-size
+range 20 verified-size
+range 21 verified-size
+range 22 verified-size
+range 23 verified-size
+range 24 verified-size
+range 25 verified-size
+range 26 verified-size
+range 27 verified-size
+range 28 verified-size
+range 29 verified-size
+range 30 verified-size
+range 31 verified-size
+range 32 verified-size
+range 33 verified-size
+range 34 verified-size
+gpgv: Signature made Mon Aug 31 01:42:46 2026 EAT
+gpgv:                using RSA key B5971F2C5C10A9A08C60030F786C63F330D7CB92
+gpgv: Good signature from "Felix Yan <felixonmars@archlinux.org>"
+gpgv:                 aka "Felix Yan <felixonmars@163.com>"
+gpgv:                 aka "Felix Yan <felixonmars@189.cn>"
+gpgv:                 aka "Felix Yan <felixonmars@archlinuxcn.org>"
+gpgv:                 aka "Felix Yan <felixonmars@fedoraproject.org>"
+gpgv:                 aka "Felix Yan <felixonmars@gmail.com>"
+gpgv:                 aka "Felix Yan <felixonmars@member.fsf.org>"
+gpgv:                 aka "Felix Yan <felixonmars@nyaa.cat>"
+gpgv:                 aka "Felix Yan <felixonmars@qq.com>"
+gpgv:                 aka "Felix Yan <felixonmars@ubuntukylin.com>"
+gpgv:                 aka "Felix Yan <felixyan@bbtechgroup.com>"
+gpgv:                 aka "Felix Yan <i@felixc.at>"
+gpgv:                 aka "Felix Yan <yanran@deepin.com>"
+gpgv:                 aka "Felix Yan <yanran@uniontech.com>"
+gpgv:                 aka "Yan, Ran (Name on Passport) <felixonmars@gmail.com>"
+gpgv:                 aka "keybase.io/felixonmars <felixonmars@keybase.io>"
+Compiler verified and extracted

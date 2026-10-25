@@ -1,0 +1,43 @@
+gpgv: Signature made Fri Mar 27 17:25:05 2026 EAT
+gpgv:                using EDDSA key D2E95FEC015CF1F911AAAB0C3D4C5008BB5C8D29
+gpgv: Signature made Mon Aug  3 20:50:21 2026 EAT
+gpgv:                using EDDSA key D2E95FEC015CF1F911AAAB0C3D4C5008BB5C8D29
+gpgv: Good signature from "Peter Jung <ptr1337@archlinux.org>"
+gpgv: Good signature from "Peter Jung <ptr1337@archlinux.org>"
+gpgv: Signature made Fri Mar 27 17:24:18 2026 EAT
+gpgv:                using EDDSA key D2E95FEC015CF1F911AAAB0C3D4C5008BB5C8D29
+gpgv: Good signature from "Peter Jung <ptr1337@archlinux.org>"
+gpgv: Signature made Fri Mar 27 17:21:13 2026 EAT
+gpgv:                using EDDSA key D2E95FEC015CF1F911AAAB0C3D4C5008BB5C8D29
+gpgv: Good signature from "Peter Jung <ptr1337@archlinux.org>"
+mingw-w64-binutils-2.47-1-x86_64.pkg.tar.zst
+gpgv: Signature made Fri Mar 27 14:34:11 2026 EAT
+gpgv:                using RSA key B5971F2C5C10A9A08C60030F786C63F330D7CB92
+gpgv: Good signature from "Felix Yan <felixonmars@archlinux.org>"
+gpgv:                 aka "Felix Yan <felixonmars@163.com>"
+gpgv:                 aka "Felix Yan <felixonmars@189.cn>"
+gpgv:                 aka "Felix Yan <felixonmars@archlinuxcn.org>"
+gpgv:                 aka "Felix Yan <felixonmars@fedoraproject.org>"
+gpgv:                 aka "Felix Yan <felixonmars@gmail.com>"
+gpgv:                 aka "Felix Yan <felixonmars@member.fsf.org>"
+gpgv:                 aka "Felix Yan <felixonmars@nyaa.cat>"
+gpgv:                 aka "Felix Yan <felixonmars@qq.com>"
+gpgv:                 aka "Felix Yan <felixonmars@ubuntukylin.com>"
+gpgv:                 aka "Felix Yan <felixyan@bbtechgroup.com>"
+gpgv:                 aka "Felix Yan <i@felixc.at>"
+gpgv:                 aka "Felix Yan <yanran@deepin.com>"
+gpgv:                 aka "Felix Yan <yanran@uniontech.com>"
+gpgv:                 aka "Yan, Ran (Name on Passport) <felixonmars@gmail.com>"
+gpgv:                 aka "keybase.io/felixonmars <felixonmars@keybase.io>"
+gpgv: Signature made Mon Oct 20 00:39:54 2025 EAT
+gpgv:                using EDDSA key EB3D764FF5D87E0818A3E0E5F05E8C12131AEB5E
+gpgv: Good signature from "Carl Smedstad <carsme@archlinux.org>"
+gpgv: Signature made Fri Oct  2 21:51:14 2026 EAT
+gpgv:                using RSA key 1519D5ABA65BF6FC2B73C7567A4E76095D8A52E4
+gpgv: Good signature from "Antonio Rojas <arojas@archlinux.org>"
+gpgv:                 aka "Antonio Rojas <arojas@us.es>"
+gpgv:                 aka "Antonio Rojas <nqn1976@gmail.com>"
+gpgv:                 aka "Antonio Rojas <nqn76sw@gmail.com>"
+mingw-w64-crt-14.0.0-1-any.pkg.tar.zst
+mingw-w64-headers-14.0.0-1-any.pkg.tar.zst
+mingw-w64-winpthreads-14.0.0-1-any.pkg.tar.zst

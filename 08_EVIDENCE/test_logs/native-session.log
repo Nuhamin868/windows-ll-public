@@ -1,0 +1,28 @@
+-- The CXX compiler identification is GNU 16.2.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (2.6s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/hammerspacecraft/Projects/Windows LL/build/native
+[1/9] Building CXX object CMakeFiles/winll_core.dir/03_SOURCE/crypto/schema.cpp.o
+[2/9] Building CXX object CMakeFiles/winll_core.dir/03_SOURCE/hashing/hash_verification.cpp.o
+[3/9] Building CXX object CMakeFiles/winll_inspect.dir/04_TESTING/unit/inspect_cli.cpp.o
+[4/9] Building CXX object CMakeFiles/winll_core.dir/03_SOURCE/pe/pe_inspector.cpp.o
+[5/9] Building CXX object CMakeFiles/winll_core.dir/03_SOURCE/core/logger.cpp.o
+[6/9] Linking CXX static library libwinll_core.a
+[7/9] Linking CXX executable winll_inspect
+[8/9] Building CXX object CMakeFiles/winll_unit.dir/04_TESTING/unit/core_tests.cpp.o
+[9/9] Linking CXX executable winll_unit
+Test project /home/hammerspacecraft/Projects/Windows LL/build/native
+    Start 1: core
+1/1 Test #1: core .............................   Passed    0.96 sec
+
+100% tests passed out of 1
+
+Total Test time (real) =   0.97 sec
+PASS 13 fixture SHA-256 digests; AES-GCM valid/tag-failure/wrong-key/schema/truncation reference checks (Python, not Windows CNG)
+PASS 2 synthetic correlations (no real endpoint events): synthetic creator/parent discrepancy; synthetic memory-change correlation
+PENDING: Wine unavailable; run Windows PowerShell integration suite.

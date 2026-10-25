@@ -1,0 +1,109 @@
+offline-integration	Set up job	﻿2026-10-22T22:33:30.9649911Z Current runner version: '2.338.0'
+offline-integration	Set up job	2026-10-22T22:33:30.9763069Z ##[group]Runner Image Provisioner
+offline-integration	Set up job	2026-10-22T22:33:30.9764450Z Hosted Compute Agent
+offline-integration	Set up job	2026-10-22T22:33:30.9766229Z Version: 20261021.618
+offline-integration	Set up job	2026-10-22T22:33:30.9767330Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+offline-integration	Set up job	2026-10-22T22:33:30.9768633Z Build Date: 2026-10-21T00:45:21Z
+offline-integration	Set up job	2026-10-22T22:33:30.9769897Z Worker ID: {3e6a2d5f-d9f9-465a-a7d6-f07116507659}
+offline-integration	Set up job	2026-10-22T22:33:30.9771174Z Region: westus
+offline-integration	Set up job	2026-10-22T22:33:30.9772140Z Cloud: Azure
+offline-integration	Set up job	2026-10-22T22:33:30.9773053Z ##[endgroup]
+offline-integration	Set up job	2026-10-22T22:33:30.9775095Z ##[group]Operating System
+offline-integration	Set up job	2026-10-22T22:33:30.9776219Z Microsoft Windows Server 2025
+offline-integration	Set up job	2026-10-22T22:33:30.9777257Z 10.0.26100
+offline-integration	Set up job	2026-10-22T22:33:30.9778137Z Datacenter
+offline-integration	Set up job	2026-10-22T22:33:30.9779044Z ##[endgroup]
+offline-integration	Set up job	2026-10-22T22:33:30.9779978Z ##[group]Runner Image
+offline-integration	Set up job	2026-10-22T22:33:30.9781122Z Image: windows-2025-vs2026
+offline-integration	Set up job	2026-10-22T22:33:30.9782199Z Version: 20261021.278.1
+offline-integration	Set up job	2026-10-22T22:33:30.9784372Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261021.278/images/windows/Windows2025-VS2026-Readme.md
+offline-integration	Set up job	2026-10-22T22:33:30.9788563Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261021.278
+offline-integration	Set up job	2026-10-22T22:33:30.9790442Z ##[endgroup]
+offline-integration	Set up job	2026-10-22T22:33:30.9792317Z ##[group]GITHUB_TOKEN Permissions
+offline-integration	Set up job	2026-10-22T22:33:30.9795202Z Contents: read
+offline-integration	Set up job	2026-10-22T22:33:30.9796211Z Metadata: read
+offline-integration	Set up job	2026-10-22T22:33:30.9797194Z ##[endgroup]
+offline-integration	Set up job	2026-10-22T22:33:30.9800206Z Secret source: Actions
+offline-integration	Set up job	2026-10-22T22:33:30.9801775Z Cache mode: write
+offline-integration	Set up job	2026-10-22T22:33:30.9803020Z Prepare workflow directory
+offline-integration	Set up job	2026-10-22T22:33:31.0276555Z Prepare all required actions
+offline-integration	Set up job	2026-10-22T22:33:31.0349073Z Getting action download info
+offline-integration	Set up job	2026-10-22T22:33:31.4069005Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+offline-integration	Set up job	2026-10-22T22:33:31.8339822Z Complete job name: offline-integration
+offline-integration	Download validation bundle	﻿2026-10-22T22:33:32.1066080Z ##[group]Run gh release download $env:RELEASE_TAG --repo $env:GH_REPO --pattern windows-ll-validation.zip --dir .
+offline-integration	Download validation bundle	2026-10-22T22:33:32.1069657Z [36;1mgh release download $env:RELEASE_TAG --repo $env:GH_REPO --pattern windows-ll-validation.zip --dir .[0m
+offline-integration	Download validation bundle	2026-10-22T22:33:32.1072413Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'Release download failed' }[0m
+offline-integration	Download validation bundle	2026-10-22T22:33:32.1074706Z [36;1mExpand-Archive windows-ll-validation.zip -DestinationPath validation[0m
+offline-integration	Download validation bundle	2026-10-22T22:33:32.4557106Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-integration	Download validation bundle	2026-10-22T22:33:32.4559440Z env:
+offline-integration	Download validation bundle	2026-10-22T22:33:32.4567102Z   GH_TOKEN: ***
+offline-integration	Download validation bundle	2026-10-22T22:33:32.4567702Z   GH_REPO: Nuhamin868/windows-ll
+offline-integration	Download validation bundle	2026-10-22T22:33:32.4568285Z   RELEASE_TAG: v0.1.0-review
+offline-integration	Download validation bundle	2026-10-22T22:33:32.4568816Z ##[endgroup]
+offline-integration	Run native Windows offline validation	﻿2026-10-22T22:33:38.9230430Z ##[group]Run New-Item -ItemType Directory -Force validation/08_EVIDENCE/test_logs | Out-Null
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:38.9231351Z [36;1mNew-Item -ItemType Directory -Force validation/08_EVIDENCE/test_logs | Out-Null[0m
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:38.9232221Z [36;1m& ./validation/04_TESTING/integration/windows_validation.ps1 *>&1 | Tee-Object -FilePath windows-validation.log[0m
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:38.9307025Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:38.9307503Z ##[endgroup]
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.5985768Z PASS 5059 checks (including 4000 mutations)
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6235550Z {"event":"artifact_validated","detail":"authenticated inert schema; plaintext not exported"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6238898Z {"event":"metadata","pid":5908,"reported_parent_pid":2064,"command_line":"\"D:\\a\\windows-ll\\windows-ll\\validation\\build\\windows\\winll_windows_unit.exe\" D:\\a\\windows-ll\\windows-ll\\validation\\04_TESTING\\test_data"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6241979Z {"event":"process","pid":5908,"name":"winll_windows_unit.exe","architecture":"x64","query_error":0}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6244195Z PASS 16 Windows API unit/smoke cases
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6473707Z {"event":"hash","detail":"vectors and known collision verified"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6641167Z {"event":"metadata","pid":7380,"reported_parent_pid":2064,"command_line":"\"D:\\a\\windows-ll\\windows-ll\\validation\\build\\windows\\windows_ll.exe\" metadata \"space argument\" λ"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6644374Z {"argument_index":0,"value":"D:\\a\\windows-ll\\windows-ll\\validation\\build\\windows\\windows_ll.exe"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6646250Z {"argument_index":1,"value":"metadata"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6649944Z {"argument_index":2,"value":"space argument"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6653226Z {"argument_index":3,"value":"λ"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.6780969Z {"event":"process","pid":6384,"name":"windows_ll.exe","architecture":"x64","query_error":0}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7117168Z {"format":"PE32+","machine":34404,"sections":[{"name":".text","rva":4096,"raw_offset":1536,"raw_size":916992},{"name":".data","rva":921600,"raw_offset":918528,"raw_size":13312},{"name":".rdata","rva":937984,"raw_offset":931840,"raw_size":77824},{"name":".pdata","rva":1015808,"raw_offset":1009664,"raw_size":48640},{"name":".xdata","rva":1064960,"raw_offset":1058304,"raw_size":71680},{"name":".bss","rva":1138688,"raw_offset":0,"raw_size":0},{"name":".idata","rva":1142784,"raw_offset":1129984,"raw_size":6144},{"name":".tls","rva":1150976,"raw_offset":1136128,"raw_size":512},{"name":".reloc","rva":1155072,"raw_offset":1136640,"raw_size":6656},{"name":"/4","rva":1163264,"raw_offset":1143296,"raw_size":2560},{"name":"/19","rva":1167360,"raw_offset":1145856,"raw_size":103424},{"name":"/31","rva":1273856,"raw_offset":1249280,"raw_size":19968},{"name":"/45","rva":1294336,"raw_offset":1269248,"raw_size":43520},{"name":"/57","rva":1339392,"raw_offset":1312768,"raw_size":8704},{"name":"/70","rva":1351680,"raw_offset":1321472,"raw_size":1024},{"name":"/81","rva":1355776,"raw_offset":1322496,"raw_size":9216},{"name":"/97","rva":1368064,"raw_offset":1331712,"raw_size":52736},{"name":"/113","rva":1421312,"raw_offset":1384448,"raw_size":2048}],"imports":[{"dll":"ADVAPI32.dll","functions":["RegCloseKey","RegGetValueW","RegOpenKeyExW"]},{"dll":"bcrypt.dll","functions":["BCryptCloseAlgorithmProvider","BCryptDecrypt","BCryptDestroyKey","BCryptGenerateSymmetricKey","BCryptGetProperty","BCryptOpenAlgorithmProvider","BCryptSetProperty"]},{"dll":"KERNEL32.dll","functions":["CloseHandle","CreateMutexW","CreateThread","CreateToolhelp32Snapshot","DeleteCriticalSection","DuplicateHandle","EnterCriticalSection","ExitThread","FormatMessageA","GetCommandLineW","GetCurrentProcess","GetCurrentProcessId","GetCurrentThread","GetCurrentThreadId","GetExitCodeThread","GetLastError","GetModuleHandleA","GetModuleHandleW","GetProcAddress","GetSystemInfo","GetSystemTimeAsFileTime","GetThreadId","GetTimeZoneInformation","InitializeConditionVariable","InitializeCriticalSection","IsDBCSLeadByteEx","IsWow64Process2","LeaveCriticalSection","LoadLibraryW","LocalFree","MultiByteToWideChar","OpenProcess","Process32FirstW","Process32NextW","RaiseException","ResumeThread","RtlCaptureContext","RtlLookupFunctionEntry","RtlUnwindEx","RtlVirtualUnwind","SetLastError","SetUnhandledExceptionFilter","Sleep","SleepConditionVariableCS","TlsAlloc","TlsFree","TlsGetValue","TlsSetValue","TryEnterCriticalSection","VirtualProtect","VirtualQuery","WaitForSingleObject","WakeAllConditionVariable","WakeConditionVariable","WideCharToMultiByte","__C_specific_handler"]},{"dll":"msvcrt.dll","functions":["___lc_codepage_func","___mb_cur_max_func","__iob_func","__set_app_type","__setusermatherr","__wgetmainargs","__winitenv","_amsg_exit","_cexit","_commode","_errno","_filelengthi64","_fileno","_fmode","_fstat64","_get_osfhandle","_initterm","_lseeki64","_onexit","_wcsicmp","_wfopen","abort","calloc","exit","fclose","fflush","fgetpos","fopen","fprintf","fputc","fputs","fread","free","fsetpos","fwrite","getc","getenv","getwc","iswctype","localeconv","malloc","memchr","memcmp","memcpy","memmove","memset","putc","putwc","realloc","setlocale","setvbuf","signal","strchr","strcmp","strcoll","strerror","strftime","strlen","strncmp","strtoul","strxfrm","towlower","towupper","ungetc","ungetwc","vfprintf","wcscoll","wcsftime","wcslen","wcstoul","wcsxfrm","_write","_read","_fileno","_fdopen"]},{"dll":"WINHTTP.dll","functions":["WinHttpCloseHandle","WinHttpConnect","WinHttpCrackUrl","WinHttpOpen","WinHttpOpenRequest","WinHttpQueryHeaders","WinHttpReadData","WinHttpReceiveResponse","WinHttpSendRequest","WinHttpSetOption","WinHttpSetTimeouts"]}]}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7230278Z {"event":"retrieval","detail":"local bytes=58"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7232343Z {"event":"artifact_validated","detail":"authenticated inert schema; plaintext not exported"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7370929Z {"event":"retrieval","detail":"local bytes=58"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7404740Z {"event":"error","detail":"authenticated decryption: CNG status -1073700862"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7524208Z {"event":"retrieval","detail":"local bytes=55"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7530156Z {"event":"error","detail":"authenticated data has invalid inert schema"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7646772Z {"event":"retrieval","detail":"local bytes=20"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7652692Z {"event":"error","detail":"invalid key/envelope"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7759940Z {"event":"retrieval","detail":"local bytes=58"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7762946Z {"event":"error","detail":"authenticated decryption: CNG status -1073700862"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7850982Z {"event":"error","detail":"HTTPS source rejected by allowlist"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.7941517Z {"event":"error","detail":"HTTPS source rejected by allowlist"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.8033542Z {"event":"error","detail":"HTTPS source rejected by allowlist"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.8130482Z {"event":"error","detail":"invalid command/argument count; run without arguments for help"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.8220598Z {"event":"error","detail":"PE: missing MZ"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.8459769Z {"event":"retrieval","detail":"registry bytes=58"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:39.8462011Z {"event":"artifact_validated","detail":"authenticated inert schema; plaintext not exported"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:40.1875261Z {"event":"error","detail":"research harness already running in this session"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:40.2571379Z {"event":"hash","detail":"vectors and known collision verified"}
+offline-integration	Run native Windows offline validation	2026-10-22T22:33:40.2572320Z PASS Windows offline integration cases
+offline-integration	Preserve actual runtime evidence	﻿2026-10-22T22:33:40.4023620Z ##[group]Run actions/upload-artifact@v4
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4024013Z with:
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4024213Z   name: native-windows-evidence
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4024598Z   path: windows-validation.log
+offline-integration	Preserve actual runtime evidence	validation/08_EVIDENCE/test_logs/
+offline-integration	Preserve actual runtime evidence	
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4025231Z   if-no-files-found: warn
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4025467Z   compression-level: 6
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4025659Z   overwrite: false
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4025853Z   include-hidden-files: false
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.4026071Z ##[endgroup]
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6458192Z (node:5368) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6459805Z (Use `node --trace-deprecation ...` to show where the warning was created)
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6551315Z Multiple search paths detected. Calculating the least common ancestor of all paths
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6554724Z The least common ancestor is D:\a\windows-ll\windows-ll. This will be the root directory of the artifact
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6556169Z With the provided path, there will be 1 file uploaded
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6562552Z Artifact name is valid!
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:40.6564585Z Root directory input is valid!
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.0607371Z Beginning upload of artifact content to blob storage
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.0843154Z (node:5368) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.3418202Z Uploaded bytes 253
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.4167008Z Finished uploading artifact content to blob storage!
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.4172034Z SHA256 digest of uploaded artifact zip is b0b3a9eb923b8b71e40fdbddaae579961bad78101337f35aa3fb5853fd13afa3
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.4173311Z Finalizing artifact upload
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.8956269Z Artifact native-windows-evidence.zip successfully finalized. Artifact ID 12464181195
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.8958437Z Artifact native-windows-evidence has been successfully uploaded! Final size is 253 bytes. Artifact ID is 12464181195
+offline-integration	Preserve actual runtime evidence	2026-10-22T22:33:41.8971847Z Artifact download URL: https://github.com/Nuhamin868/windows-ll/actions/runs/39865808426/artifacts/12464181195
+offline-integration	Complete job	﻿2026-10-22T22:33:41.9234716Z Cleaning up orphan processes
+offline-integration	Complete job	2026-10-22T22:33:41.9368941Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

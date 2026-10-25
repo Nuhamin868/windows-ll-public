@@ -1,0 +1,10 @@
+{
+  "compiler-complete.pkg.tar.zst": "9fde71b655105ed8704fb1494a39f3b94d0a138df9dface881588e6cef4886f1",
+  "cmake-4.4.4-1-x86_64.pkg.tar.zst": "d9deb07a41610c2ffc8ab543bdbf033d647015088638e846c0a843ede3631b31",
+  "rhash-1.4.6-1-x86_64.pkg.tar.zst": "6f791b676347898dc72d20cd94be0da2228a26339e6bc511b17f1278d8110706",
+  "cppdap-1.58.0-3-x86_64.pkg.tar.zst": "5c8bd9b3881ba9b2bea98eefa95df21d92b026f0c7537105d943857b22388be3",
+  "mingw-w64-crt-14.0.0-1-any.pkg.tar.zst": "a809d9b6608235e5b693f1ebda97aa6c3539783c84509cb8db3306ef56ad0a4f",
+  "mingw-w64-winpthreads-14.0.0-1-any.pkg.tar.zst": "21a4dd95e8a5f0b802d8585e59024f2cfbbd435cee31ed31b511159d9d10579b",
+  "mingw-w64-headers-14.0.0-1-any.pkg.tar.zst": "5b8d6e83aa5c3b456d96a12a4af51518ddd71600d66048ced4b34c0b40a3fb19",
+  "mingw-w64-binutils-2.47-1-x86_64.pkg.tar.zst": "a174f1b5894674b039d356878198e146053fa9527b282d6fac3acb46309b117d"
+}

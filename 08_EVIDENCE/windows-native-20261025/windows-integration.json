@@ -1,0 +1,136 @@
+{
+  "platform": "native Windows",
+  "cases": [
+    {
+      "case": "portable units",
+      "exit": 0
+    },
+    {
+      "case": "API units",
+      "exit": 0
+    },
+    {
+      "case": "hash",
+      "exit": 0
+    },
+    {
+      "case": "metadata Unicode and spaces",
+      "exit": 0
+    },
+    {
+      "case": "process JSON",
+      "exit": 0
+    },
+    {
+      "case": "case sensitive filter",
+      "exit": 0
+    },
+    {
+      "case": "own PE",
+      "exit": 0
+    },
+    {
+      "case": "valid artifact",
+      "exit": 0
+    },
+    {
+      "case": "bad-tag.bin",
+      "exit": 1
+    },
+    {
+      "case": "bad-schema.bin",
+      "exit": 1
+    },
+    {
+      "case": "truncated-artifact.bin",
+      "exit": 1
+    },
+    {
+      "case": "wrong key",
+      "exit": 1
+    },
+    {
+      "case": "malformed PE",
+      "exit": 1
+    },
+    {
+      "case": "unknown command",
+      "exit": 1
+    },
+    {
+      "case": "invalid hold -1",
+      "exit": 1
+    },
+    {
+      "case": "invalid hold 30001",
+      "exit": 1
+    },
+    {
+      "case": "invalid hold 2x",
+      "exit": 1
+    },
+    {
+      "case": "registry missing",
+      "exit": 1
+    },
+    {
+      "case": "create registry key",
+      "exit": 0
+    },
+    {
+      "case": "registry missing value",
+      "exit": 1
+    },
+    {
+      "case": "registry wrong type setup",
+      "exit": 0
+    },
+    {
+      "case": "registry wrong type",
+      "exit": 1
+    },
+    {
+      "case": "registry setup artifact.bin",
+      "exit": 0
+    },
+    {
+      "case": "registry artifact.bin",
+      "exit": 0
+    },
+    {
+      "case": "registry setup bad-tag.bin",
+      "exit": 0
+    },
+    {
+      "case": "registry bad-tag.bin",
+      "exit": 1
+    },
+    {
+      "case": "registry setup bad-schema.bin",
+      "exit": 0
+    },
+    {
+      "case": "registry bad-schema.bin",
+      "exit": 1
+    },
+    {
+      "case": "registry cleanup",
+      "exit": 0
+    },
+    {
+      "case": "cross process duplicate rejection",
+      "exit": 1
+    },
+    {
+      "case": "mutex reacquisition after termination",
+      "exit": 0
+    }
+  ],
+  "result": "PASS",
+  "not_covered": [
+    "live HTTPS",
+    "registry concurrent mutation",
+    "multiple Windows sessions",
+    "native Windows access denial and ancestry"
+  ]
+}
