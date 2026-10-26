@@ -30,10 +30,12 @@ def main():
         raise RuntimeError(result.stderr)
     rows = [json.loads(line) for line in result.stdout.splitlines()]
     denied = [row for row in rows if row['query_error'] == 5]
-    if not denied or any(row['architecture'] != 'unknown' for row in denied):
-        raise RuntimeError('No access-denied process observation with unknown architecture')
-    records.append({'case': 'native process access denial', 'result': 'PASS',
-                    'observations': denied})
+    if any(row['architecture'] != 'unknown' for row in denied):
+        raise RuntimeError('Access-denied process incorrectly reports a known architecture')
+    records.append({'case': 'native process access denial',
+                    'result': 'PASS' if denied else 'UNVERIFIED',
+                    'observations': denied,
+                    'limitation': 'A runner with no denied process cannot prove denial handling'})
 
     result = run('metadata')
     metadata = json.loads(result.stdout.splitlines()[0])
@@ -134,13 +136,14 @@ def main():
     records.append({'case': 'concurrent registry mutation stress', 'result': 'PASS',
                     'reads': 60, 'writes': dict(writes), 'outcomes': dict(outcomes),
                     'limitation': 'Concurrent stress, not deterministic scheduling between the two native reads'})
-    report = {'platform': 'native Windows', 'os': platform.platform(), 'result': 'PASS',
+    overall = 'PASS' if denied else 'PARTIAL'
+    report = {'platform': 'native Windows', 'os': platform.platform(), 'result': overall,
               'cases': records, 'remaining': ['forced PID reuse / historical ancestry',
                                             'multiple Windows sessions', 'controlled HTTPS matrix']}
     out = ROOT / '08_EVIDENCE/test_logs/windows-stress.json'
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(report, indent=2) + '\n')
-    print(f'PASS {len(records)} native Windows probes; {out}')
+    print(f'{overall}: {len(records)} native Windows probes; {out}')
 
 
 if __name__ == '__main__':
