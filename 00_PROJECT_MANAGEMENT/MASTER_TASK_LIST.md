@@ -41,3 +41,5 @@ Fresh MinGW x64 build and native ASan/UBSan suite passed. Wine passed 5,059 port
 System CMake, Ninja, MinGW, Wine, and osslsigncode are now available; the earlier missing-tool notes describe the original environment. No dependencies were installed during this review. Signing remains optional and untested, and the executable is unsigned. Controlled HTTPS validation and the extended Windows cases remain pending. Status remains PARTIALLY COMPLETE until those requirements have real evidence. See [demonstration guide](../07_DOCUMENTATION/DEMONSTRATION.md).
 
 2026-10-25: added the 31-case Wine integration runner, controlled HTTPS fixture service/runner, fresh-source native CI, extended registry tests and verified development signing. See [latest review](../SUBMISSION_REVIEW.md). Live TLS and extended native acceptance remain pending.
+
+2026-10-26: authored native-only access-denied, parent-observation, process-churn and concurrent-registry stress probes; native CI execution pending. PID reuse, multiple sessions, TLS setup and external rubric remain open.

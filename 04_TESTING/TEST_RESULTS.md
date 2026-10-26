@@ -33,3 +33,7 @@ System CMake, Ninja, MinGW, Wine, and osslsigncode are now available; the earlie
 ## Extended native validation — 2026-10-25
 
 [Current-source Windows CI](https://github.com/Nuhamin868/windows-ll/actions/runs/40181027013) passed the fresh MinGW build, 31 integration/setup/cleanup cases, 5,059 portable checks, 16 API cases and the PowerShell suite including registry oversize/type/missing-value tests. Raw logs: `08_EVIDENCE/windows-native-20261025/`. Development signing/tamper checks also passed under osslsigncode. Live HTTPS and specialized acceptance remain pending.
+
+## 2026-10-26 acceptance continuation
+
+Fresh Linux MinGW Windows cross-build and native sanitizer/reference checks passed. Native Windows stress runner authored; actual Windows results pending CI. Stress does not guarantee PID reuse or a particular snapshot/read interleaving.

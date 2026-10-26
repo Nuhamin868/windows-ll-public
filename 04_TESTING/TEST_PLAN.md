@@ -57,3 +57,7 @@ python3 04_TESTING/integration/https_validation.py --base-url https://YOUR_CONTR
 ```
 
 Append `--wine` for compatibility testing. Repeat `--rejected-tls-url https://CONTROLLED_CERT_FAILURE_HOST/valid` for independently configured expired, mismatched and untrusted certificate hosts. Preserve their certificate configuration with the evidence. The runner tests good/bad artifacts, wrong keys, empty/truncated records, redirect refusal, 404/500, size caps with/without Content-Length, receive timeout, slow-drip deadline, disconnect and URL restrictions. It checks server logs for forbidden redirect/rejected paths. A run with no certificate hosts does not cover certificate-failure categories. These tools are authored; no live HTTPS pass is claimed without executing against the controlled service.
+
+## Native stress probes
+
+Run `python 04_TESTING/integration/windows_stress_validation.py` on native Windows after the offline suite. It requires an observed ERROR_ACCESS_DENIED record with unknown architecture, compares the live launcher PID, enumerates during child creation/exit, and reads authenticated registry artifacts during size/type/content mutation. Results are recorded only after all probes pass. It refuses pre-existing test registry data. Stress cannot establish a deterministic read race, forced PID reuse or cross-session behavior. API basis: [OpenProcess](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess).

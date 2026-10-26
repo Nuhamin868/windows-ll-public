@@ -29,6 +29,11 @@ jobs:
           python 04_TESTING/integration/runtime_validation.py
           if ($LASTEXITCODE -ne 0) { throw 'Runtime validation failed' }
           & ./04_TESTING/integration/windows_validation.ps1 *>&1 | Tee-Object 08_EVIDENCE/test_logs/windows-powershell.log
+      - name: Run native Windows stress acceptance
+        shell: powershell
+        run: |
+          python 04_TESTING/integration/windows_stress_validation.py
+          if ($LASTEXITCODE -ne 0) { throw 'Windows stress acceptance failed' }
       - name: Preserve executables and evidence
         if: always()
         uses: actions/upload-artifact@v4

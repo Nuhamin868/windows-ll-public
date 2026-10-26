@@ -21,3 +21,7 @@
 | R13 curriculum | Existing defensive mapping/source inventory retained; operational course code not adopted |
 
 Remaining: controlled trusted HTTPS and independently configured certificate-failure hosts; specialized denied access, PID reuse, concurrent registry changes and cross-session acceptance; verify original assignment rubric. Operational injection, payload execution, concealment and identity manipulation remain intentionally excluded.
+
+## Acceptance continuation — 2026-10-26
+
+Added a native-only runner for observed access-denied reporting, live launcher parent matching, process-churn inventory and concurrent registry mutation stress. Execution results are pending CI; neither forced PID reuse nor multiple-session acceptance is claimed. HTTPS endpoint/trust setup and external rubric remain requested inputs.
